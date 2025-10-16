@@ -12,7 +12,7 @@
 
 #include "Dog.hpp"
 
-Dog::Dog() : Animal("Dog"){
+Dog::Dog() : Animal("Dog"), _brain(new Brain) {
 	std::cout << "Dog constructor called" << std::endl;
 }
 
@@ -37,4 +37,8 @@ Dog::~Dog() {
 
 void	Dog::makeSound() const{
 	std::cout << "Dog go woof woof" << std::endl;
+}
+
+Brain*	Dog::getBrain() const {
+	return (_brain);
 }

@@ -12,7 +12,7 @@
 
 #include "Cat.hpp"
 
-Cat::Cat() : Animal("Cat"){
+Cat::Cat() : Animal("Cat"), _brain(new Brain) {
 	new Brain();
 	std::cout << "Cat constructor called" << std::endl;
 }
@@ -38,4 +38,8 @@ Cat::~Cat(){
 
 void	Cat::makeSound() const{
 	std::cout << "Cat go meow meow" << std::endl;
+}
+
+Brain*	Cat::getBrain() const {
+	return (_brain);
 }
