@@ -6,7 +6,7 @@
 /*   By: dreule <dreule@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 18:24:40 by dreule            #+#    #+#             */
-/*   Updated: 2025/10/15 18:24:58 by dreule           ###   ########.fr       */
+/*   Updated: 2025/10/16 12:29:12 by dreule           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,19 @@
 
 int	main()
 {
-	return ;
+	const Animal* meta = new Animal();
+	const Animal* d = new Dog();
+	const Animal* c = new Cat();
+
+	std::cout << d->getType() << " " << std::endl;
+	std::cout << c->getType() << " " << std::endl;
+	c->makeSound();
+	d->makeSound();
+	meta->makeSound();
+
+	delete (meta);
+	delete (d);
+	delete (c);
+
+	return (0);
 }

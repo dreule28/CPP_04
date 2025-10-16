@@ -6,7 +6,7 @@
 /*   By: dreule <dreule@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 17:33:57 by dreule            #+#    #+#             */
-/*   Updated: 2025/10/15 18:18:27 by dreule           ###   ########.fr       */
+/*   Updated: 2025/10/16 12:32:30 by dreule           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,8 @@ Animal::Animal(): type("Animal"){
 }
 
 Animal::Animal(const std::string& name) : type(name){
-	std::cout << "Animal name-constructor called" << std::endl;
+	std::cout << "Animal name-constructor called."
+			<< " Animal named: " << name << std::endl;
 }
 
 Animal::Animal(const Animal& other) : type(other.type){
@@ -34,9 +35,13 @@ Animal&	Animal::operator=(const Animal& other)
 }
 
 Animal::~Animal(){
-	std::cout << "Animal destructor caleld" << std::endl;
+	std::cout << "Animal destructor called" << std::endl;
 }
 
-void	Animal::makeSound(){
-	std::cout << "Generic animal sounds..." << std::endl;
+void	Animal::makeSound() const{
+	std::cout << "Generic ahh sounds..." << std::endl;
+}
+
+const std::string	Animal::getType() const{
+	return (type);
 }

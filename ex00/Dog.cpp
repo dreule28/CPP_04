@@ -6,7 +6,7 @@
 /*   By: dreule <dreule@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 17:33:52 by dreule            #+#    #+#             */
-/*   Updated: 2025/10/15 18:24:02 by dreule           ###   ########.fr       */
+/*   Updated: 2025/10/16 12:33:54 by dreule           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,6 @@ Dog::~Dog() {
 	std::cout << "Dog destructor called" << std::endl;
 }
 
-void	Dog::makeSound(){
+void	Dog::makeSound() const{
 	std::cout << "Dog go woof woof" << std::endl;
 }

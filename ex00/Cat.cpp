@@ -6,7 +6,7 @@
 /*   By: dreule <dreule@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 17:37:18 by dreule            #+#    #+#             */
-/*   Updated: 2025/10/15 18:24:32 by dreule           ###   ########.fr       */
+/*   Updated: 2025/10/16 12:33:57 by dreule           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,6 @@ Cat::~Cat(){
 	std::cout << "Cat destructor called" << std::endl;
 }
 
-void	Cat::makeSound(){
+void	Cat::makeSound() const{
 	std::cout << "Cat go meow meow" << std::endl;
 }

@@ -1,4 +1,4 @@
-NAME = ClapTrap
+NAME = Animal
 CPP = c++
 RM = rm -rf
 
