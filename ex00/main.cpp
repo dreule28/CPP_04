@@ -12,22 +12,43 @@
 
 #include "Cat.hpp"
 #include "Dog.hpp"
+#include "WrongCat.hpp"
 
 int	main()
 {
-	const Animal* meta = new Animal();
-	const Animal* d = new Dog();
-	const Animal* c = new Cat();
+	{
+		const Animal* meta = new Animal();
+		const Animal* d = new Dog();
+		const Animal* c = new Cat();
 
-	std::cout << d->getType() << " " << std::endl;
-	std::cout << c->getType() << " " << std::endl;
-	c->makeSound();
-	d->makeSound();
-	meta->makeSound();
+		std::cout << d->getType() << " " << std::endl;
+		std::cout << c->getType() << " " << std::endl;
+		c->makeSound();
+		d->makeSound();
+		meta->makeSound();
 
-	delete (meta);
-	delete (d);
-	delete (c);
+		delete (meta);
+		delete (d);
+		delete (c);
+	}
+
+	std::cout << "\nFirst scope finished\n" << std::endl;
+
+	{
+		const WrongAnimal* meta = new WrongAnimal();
+		const Animal* d = new Dog();
+		const WrongAnimal* c = new WrongCat();
+
+		std::cout << d->getType() << " " << std::endl;
+		std::cout << c->getType() << " " << std::endl;
+		c->makeSound();
+		d->makeSound();
+		meta->makeSound();
+
+		delete (meta);
+		delete (d);
+		delete (c);
+	}
 
 	return (0);
 }
