@@ -6,7 +6,7 @@
 /*   By: dreule <dreule@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 17:34:12 by dreule            #+#    #+#             */
-/*   Updated: 2025/10/15 18:18:55 by dreule           ###   ########.fr       */
+/*   Updated: 2025/10/16 12:27:13 by dreule           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ class Cat : public Animal
 		Cat(const Cat& other);
 		Cat&	operator=(const Cat& other);
 		~Cat();
-		void	makeSound() override;
+		void	makeSound() const override;
 
 };
 

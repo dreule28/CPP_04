@@ -6,7 +6,7 @@
 /*   By: dreule <dreule@student.42heilbronn.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 17:32:04 by dreule            #+#    #+#             */
-/*   Updated: 2025/10/15 18:22:28 by dreule           ###   ########.fr       */
+/*   Updated: 2025/10/16 12:27:16 by dreule           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ class Dog : public Animal
 		Dog(const Dog& other);
 		Dog&	operator=(const Dog& other);
 		~Dog();
-		void	makeSound() override;
+		void	makeSound() const override;
 };
 
 #endif
