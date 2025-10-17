@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include <iostream>
-#include "Animal.hpp"
+#include "AAnimal.hpp"
 #include "Dog.hpp"
 #include "Cat.hpp"
 
@@ -31,8 +31,8 @@ int main()
 {
 	line("Basic leak test");
 	{
-		const Animal*	d = new Dog();
-		const Animal*	c = new Cat();
+		const AAnimal*	d = new Dog();
+		const AAnimal*	c = new Cat();
 		delete d;
 		delete c;
 	}
@@ -40,7 +40,7 @@ int main()
 	line("Array of Animals (half Dogs, half Cats)");
 	{
 		const size_t	N = 10;
-		Animal*	zoo[N];
+		AAnimal*	zoo[N];
 
 		for (size_t i = 0; i < N; ++i)
 		{

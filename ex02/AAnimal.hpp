@@ -10,20 +10,20 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ANIMAL_HPP
-#define ANIMAL_HPP
+#ifndef AANIMAL_HPP
+#define AANIMAL_HPP
 
 #include <iostream>
 
-class Animal
+class AAnimal
 {
 	public:
-		Animal();
-		Animal(const std::string& name);
-		Animal(const Animal& other);
-		Animal&	operator=(const Animal& other);
-		virtual ~Animal();
-		virtual void	makeSound() const ;
+		AAnimal();
+		AAnimal(const std::string& name);
+		AAnimal(const AAnimal& other);
+		AAnimal&	operator=(const AAnimal& other);
+		virtual ~AAnimal();
+		virtual void	makeSound() const = 0;
 		const std::string	getType() const;
 
 
