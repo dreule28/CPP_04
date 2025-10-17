@@ -33,6 +33,7 @@ int main()
 	{
 		const AAnimal*	d = new Dog();
 		const AAnimal*	c = new Cat();
+		// const AAnimal*	a = new AAnimal();
 		delete d;
 		delete c;
 	}
