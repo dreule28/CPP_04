@@ -28,13 +28,13 @@ Brain::~Brain() {
 
 const std::string&	Brain::getIdea(int index) const
 {
-	const std::string empty;
+	static const std::string empty;
 	if (index < 0 || index > 100)
 		return (empty);
 	return (ideas[index]);
 }
 
-void	Brain::setIdea(std::string& idea, int index)
+void	Brain::setIdea(int index, const std::string& idea)
 {
 	if (index < 0 || index > 100)
 		return ;
