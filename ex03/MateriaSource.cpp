@@ -44,3 +44,32 @@ MateriaSource::~MateriaSource()
 			delete learned[i];
 	std::cout << "MateriaSource dtor called" << std::endl;
 }
+
+void	MateriaSource::learnMateria(AMateria* materia)
+{
+	if (!materia)
+	{
+		std::cout << "Materia is NULL" << std::endl;
+		return ;
+	}
+	for (int i = 0; i < 4; ++i)
+		if (!learned[i])
+		{
+			learned[i] = materia->clone();
+			std::cout << "Learned materia " << materia->getType() << " in position" << i << std::endl;
+			return ;
+		}
+	std::cout << "Full. Cannot learn any new materias" << std::endl;
+}
+
+AMateria*	MateriaSource::createMateria(const std::string& type)
+{
+	for (int i = 0; i< 4; ++i)
+		if (learned[i] && learned[i]->getType() == type)
+		{
+			std::cout << "Creating materia type " << type << std::endl;
+			return (learned[i]->clone());
+		}
+	std::cout << "Can't learn type " << type << std::endl;
+	return (NULL);
+}
