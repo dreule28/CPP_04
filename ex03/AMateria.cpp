@@ -1,8 +1,8 @@
 #include "AMateria.hpp"
 
-AMateria::AMateria(const AMateria& other) {}
+AMateria::AMateria(const AMateria& other) {(void)other;}
 
-AMateria::AMateria(const std::string& type) : type(type) {}
+AMateria::AMateria(const std::string& type) : _type(type) {}
 
 AMateria&	AMateria::operator=(const AMateria& other)
 {
@@ -12,6 +12,6 @@ AMateria&	AMateria::operator=(const AMateria& other)
 
 AMateria::~AMateria() {}
 
-const std::string&	AMateria::getType() const {
-	return (type);
-}
+void	AMateria::use(ICharacter& target) {(void)target;}
+
+const std::string&	AMateria::getType() const {return (_type);}

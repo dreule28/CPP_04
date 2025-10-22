@@ -1,16 +1,10 @@
 #include "Cure.hpp"
 
-Cure::Cure() : AMateria("cure") {
-	std::cout << "Cure materia created" << std::endl;
-}
+Cure::Cure() : AMateria("cure") {}
 
-Cure::~Cure() {
-	std::cout << "Cure materia destroyed" << std::endl;
-}
+Cure::~Cure() {}
 
-Cure::Cure(const Cure& other) : AMateria(other) {
-	std::cout << "Cure materia copied" << std::endl;
-}
+Cure::Cure(const Cure& other) : AMateria(other) {}
 
 void	Cure::use(ICharacter& target) {
 	std::cout << "* heals " << target.getName() << "'s wounds *" << std::endl;
