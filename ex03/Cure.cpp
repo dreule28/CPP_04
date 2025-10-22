@@ -4,6 +4,12 @@ Cure::Cure() : AMateria("cure") {}
 
 Cure::~Cure() {}
 
+Cure&	Cure::operator=(const Cure& other)
+{
+	(void)other;
+	return (*this);
+}
+
 Cure::Cure(const Cure& other) : AMateria(other) {}
 
 void	Cure::use(ICharacter& target) {
