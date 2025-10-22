@@ -2,6 +2,7 @@
 
 #include "ICharacter.hpp"
 #include <iostream>
+#include "AMateria.hpp"
 
 class Character : public ICharacter
 {
@@ -18,6 +19,6 @@ class Character : public ICharacter
 		void use(int idx, ICharacter& target);
 
 	private:
-		const std::string name;
+		const std::string _name;
 		AMateria* inventory[4];
 };
