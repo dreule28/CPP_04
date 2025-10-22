@@ -1,8 +1,6 @@
 #include "Character.hpp"
 
-Character::Character() {
-	std::cout << "Character created" << std::endl;
-}
+Character::Character() {}
 
 Character::Character(const std::string& name) : _name(name)
 {
@@ -66,7 +64,6 @@ void	Character::equip(AMateria* m)
 		if (!inventory[i])
 		{
 			inventory[i] = m;
-			std::cout << _name << " equipped " << m->getType() << " in slot " << i << std::endl;
 			return ;
 		}
 	}

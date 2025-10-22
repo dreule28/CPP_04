@@ -1,6 +1,6 @@
 #include "AMateria.hpp"
 
-AMateria::AMateria(const AMateria& other) {(void)other;}
+AMateria::AMateria(const AMateria& other) : _type(other._type) {}
 
 AMateria::AMateria(const std::string& type) : _type(type) {}
 
