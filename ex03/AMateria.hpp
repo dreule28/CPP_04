@@ -1,8 +1,7 @@
 #pragma once
 
 #include <iostream>
-
-class Character;
+#include "Character.hpp"
 
 class AMateria
 {
@@ -10,12 +9,12 @@ class AMateria
 		AMateria(const AMateria& other);
 		AMateria(const std::string& type);
 		AMateria&	operator=(const AMateria& other);
-		~AMateria();
+		virtual ~AMateria();
 
 		const std::string& getType() const;
-		virtual void use(Character& target);
+		virtual void use(ICharacter& target);
 		virtual AMateria* clone() const = 0;
 
 	protected:
-		const std::string	type;
+		const std::string	_type;
 };
