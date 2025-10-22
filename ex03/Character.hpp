@@ -1,10 +1,12 @@
 #pragma once
 
 #include "ICharacter.hpp"
+#include <iostream>
 
 class Character : public ICharacter
 {
 	public:
+		Character();
 		Character(const std::string& name);
 		Character(const Character& other);
 		Character&	operator=(const Character& other);
@@ -16,6 +18,6 @@ class Character : public ICharacter
 		void use(int idx, ICharacter& target);
 
 	private:
-		std::string name;
+		const std::string name;
 		AMateria* inventory[4];
 };
