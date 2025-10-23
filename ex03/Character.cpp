@@ -83,6 +83,7 @@ void	Character::unequip(int idx)
 		return ;
 	}
 	std:: cout << _name << " unequipped " << inventory[idx]->getType() << " from slot " << idx << std::endl;
+	Floor::drop(inventory[idx]);
 	inventory[idx] = NULL;
 }
 

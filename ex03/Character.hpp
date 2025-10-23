@@ -3,6 +3,7 @@
 #include "ICharacter.hpp"
 #include <iostream>
 #include "AMateria.hpp"
+#include "Floor.hpp"
 
 class Character : public ICharacter
 {
