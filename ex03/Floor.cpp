@@ -24,8 +24,8 @@ void	Floor::drop(AMateria* materia)
 		return ;
 	if (_count < 100)
 		_store[_count++] = materia;
-	// else
-	// 	delete materia;
+	else
+		delete materia;
 	return ;
 }
 

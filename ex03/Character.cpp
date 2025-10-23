@@ -68,6 +68,7 @@ void	Character::equip(AMateria* m)
 		}
 	}
 	std::cout << _name << "'s inventory is full!" << std::endl;
+	Floor::drop(m);
 }
 
 void	Character::unequip(int idx)
